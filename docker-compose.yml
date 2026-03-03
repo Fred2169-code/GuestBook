@@ -1,0 +1,10 @@
+﻿services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: app-test-docker:latest
+    container_name: app-test-container
+    ports:
+      - "8080:8000"
+    restart: unless-stopped
